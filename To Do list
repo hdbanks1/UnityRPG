@@ -1,0 +1,7 @@
+Get random Enemy to spawn
+Get Boss to spawn when necessary. Possibly make a spawn script when encountering enemys. a Random encounter script for the enemy and a boss for a boss with a coroutine for their behavior.
+
+get scriptable buttons in the skill list
+usable item inventory
+weakness and strengths
+equipment that affects stats
