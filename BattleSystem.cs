@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +17,8 @@ public class BattleSystem : MonoBehaviour
     public Transform playerSpace2;
 
     public Transform enemySpace;
+    public Transform enemySpace1;
+    public Transform enemySpace2;
     public Text dialogueText;
     public GameObject skillMenu;
     
@@ -25,8 +27,8 @@ public class BattleSystem : MonoBehaviour
     Unit playerUnit1;
     Unit playerUnit2;
     Unit enemyUnit;
-    //Unit enemyUnit1;
-    //Unit enemyUnit2;
+    Unit enemyUnit1;
+    Unit enemyUnit2;
     Skill Skill;
     Button skills;
 
@@ -59,6 +61,7 @@ public class BattleSystem : MonoBehaviour
 
     PlayerParty playerParty;
     public List<GameObject>players;
+    Enemies enemyScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +100,14 @@ public class BattleSystem : MonoBehaviour
         GameObject enemyGO = Instantiate(enemyPrefab, enemySpace);
         enemyUnit = enemyGO.GetComponent<Unit>();
         enemies.Add(enemyGO);
+
+
+       GameObject enemy2 = Instantiate(enemies[0], enemySpace1);
+        enemyUnit2 = enemy2.GetComponent<Unit>();
+
+        GameObject enemy3 = Instantiate(enemies[0], enemySpace2);
+        enemyUnit2 = enemy2.GetComponent<Unit>();
+
 
 
         dialogueText.text = "A wild " + enemyUnit.unitName + "Approaches";
