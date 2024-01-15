@@ -40,7 +40,7 @@ public class LevelSystem : MonoBehaviour
 
     }
 
-    void LevelUp()
+    public void LevelUp()
     {
         if (canLevel)
         {
