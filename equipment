@@ -1,0 +1,13 @@
+using UnityEngine;
+
+
+[CreateAssetMenu(menuName="Equip")]
+public class Equipment: ScriptableObject{
+public enum EquipType{Weapon, Protector, Footwear, Accessory};
+
+public string itemName;
+public int itemCount;
+public Sprite iconType;
+
+
+}
